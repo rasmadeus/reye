@@ -1,34 +1,24 @@
-int slider_pos = 0;
-CvCapture* capture = nullptr;
-
-
-void onTrackbarSlide(int pos)
+void transform(IplImage* img)
 {
-    cvSetCaptureProperty(capture, CV_CAP_PROP_POS_FRAMES, pos);
+    cvNamedWindow("in");
+    cvNamedWindow("out");
+    cvShowImage("in", img);
+
+    auto out = cvCreateImage(cvGetSize(img), IPL_DEPTH_8U, 3);
+    cvSmooth(img, out, CV_BLUR_NO_SCALE, 3, 3);
+
+    cvShowImage("out", out);
+    cvReleaseImage(&out);
+
+    cvWaitKey(0);
+    cvDestroyWindow("out");
+    cvDestroyWindow("in");
 }
+
 
 int main(int argc, char *argv[])
 {
-    cvNamedWindow("TrackBar", CV_WINDOW_AUTOSIZE);
-    capture = cvCreateFileCapture("res/rra.avi");
-
-    const auto frames = static_cast<int>(cvGetCaptureProperty(capture, CV_CAP_PROP_FRAME_COUNT));
-    if (0 != frames)
-        cvCreateTrackbar("Position", "TrackBar", &slider_pos, frames, onTrackbarSlide);
-
-    IplImage* frame;
-    while(true)
-    {
-        frame = cvQueryFrame(capture);
-        if (!frame)
-            break;
-
-        cvShowImage("TrackBar", frame);
-        const char c = cvWaitKey(33);
-        if (27 == c)
-            break;
-    }
-
-    cvReleaseCapture(&capture);
-    cvDestroyWindow("TrackBar");
+    auto img = cvLoadImage("res/rra.jpg");
+    transform(img);
+    cvReleaseImage(&img);
 }
