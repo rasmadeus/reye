@@ -4,7 +4,6 @@ DESTDIR = $$PWD/bin
 
 CONFIG += console c++11
 CONFIG -= app_bundle
-CONFIG -= qt
 
 include (opencv.pri)
 
@@ -15,4 +14,5 @@ SOURCES += \
     src/main.cpp
 
 HEADERS += \
-    src/pch.h
+    src/pch.h \
+    src/version.h
