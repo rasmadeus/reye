@@ -28,5 +28,8 @@
 *.out
 *.app
 
+#Qt
+*.user
+
 #This application
 reye
