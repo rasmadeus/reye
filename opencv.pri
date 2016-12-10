@@ -5,4 +5,4 @@ CONFIG(debug, debug|release) {
 }
 
 INCLUDEPATH += $$OPENCV_HOME/include
-LIBS += -L$$OPENCV_HOME/lib -lopencv_core -lopencv_highgui
+LIBS += -L$$OPENCV_HOME/lib -lopencv_core -lopencv_highgui -lopencv_imgproc
