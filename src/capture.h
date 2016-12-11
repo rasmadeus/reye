@@ -36,7 +36,7 @@ void removeColors()
     auto writer = cvCreateVideoWriter("res/rra_out.avi", CV_FOURCC('M', 'J', 'P', 'G'), fps, size);
     auto logpolar_frame = cvCreateImage(size, IPL_DEPTH_8U, 3);
 
-    while(!(bgr_frame = cvQueryFrame(capture)))
+    while((bgr_frame = cvQueryFrame(capture)))
     {
         cvLogPolar(bgr_frame, logpolar_frame, cvPoint2D32f(bgr_frame->width / 2, bgr_frame->height / 2), 40, CV_INTER_LINEAR + CV_WARP_FILL_OUTLIERS);
         cvWriteFrame(writer, logpolar_frame);
