@@ -15,4 +15,5 @@ SOURCES += \
 
 HEADERS += \
     src/pch.h \
-    src/version.h
+    src/version.h \
+    src/capture.h
