@@ -1,6 +1,7 @@
-#include "inc.h"
+#include "mouse_draw.h"
 
 int main()
 {
-    blend("res/rra.jpg", "res/siv.jpg", 0.7, 0.5);
+    MousePainter mp;
+    mp.draw();
 }
