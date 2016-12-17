@@ -2,5 +2,5 @@
 
 int main()
 {
-    inc("res/rra.jpg", 320, 430, 200, 200, 100);
+    blend("res/rra.jpg", "res/siv.jpg", 0.7, 0.5);
 }
