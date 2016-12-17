@@ -19,4 +19,5 @@ HEADERS += \
     src/capture.h \
     src/inc.h \
     src/mouse_draw.h \
-    src/threshold.h
+    src/threshold.h \
+    src/circle_finder.h

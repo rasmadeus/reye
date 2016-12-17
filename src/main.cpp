@@ -1,6 +1,6 @@
-#include "threshold.h"
+#include "circle_finder.h"
 
 int main()
 {
-    show_threshold("res/rra.jpg");
+    find_circles("res/rra.jpg");
 }
