@@ -1,6 +1,6 @@
-#include "capture.h"
+#include "inc.h"
 
-int main(int argc, char *argv[])
+int main()
 {
-    removeColors();
+    inc("res/rra.jpg", 320, 430, 200, 200, 100);
 }
