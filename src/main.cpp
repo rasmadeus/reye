@@ -1,7 +1,6 @@
-#include "mouse_draw.h"
+#include "threshold.h"
 
 int main()
 {
-    MousePainter mp;
-    mp.draw();
+    show_threshold("res/rra.jpg");
 }
