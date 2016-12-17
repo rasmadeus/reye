@@ -15,4 +15,8 @@ SOURCES += \
 
 HEADERS += \
     src/pch.h \
-    src/version.h
+    src/version.h \
+    src/capture.h \
+    src/inc.h \
+    src/mouse_draw.h \
+    src/threshold.h
