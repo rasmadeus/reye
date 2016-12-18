@@ -1,6 +1,6 @@
-#include "circle_finder.h"
+#include "warp_affine.h"
 
 int main()
 {
-    find_circles("res/rra.jpg");
+    warp_affine("res/rra.jpg");
 }

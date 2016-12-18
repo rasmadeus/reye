@@ -20,4 +20,5 @@ HEADERS += \
     src/inc.h \
     src/mouse_draw.h \
     src/threshold.h \
-    src/circle_finder.h
+    src/circle_finder.h \
+    src/warp_affine.h
