@@ -1,6 +1,6 @@
-#include "warp_affine.h"
+#include "log_polar.h"
 
 int main()
 {
-    warp_affine("res/rra.jpg");
+    log_polar("res/rra.jpg");
 }
