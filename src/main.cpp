@@ -1,6 +1,6 @@
-#include "threshold.h"
+#include "histogram.h"
 
 int main()
 {
-    show_threshold("res/rra.jpg");
+    show_histogram("res/rra.jpg");
 }
