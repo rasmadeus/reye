@@ -1,6 +1,6 @@
-#include "threshold.h"
+#include "log_polar.h"
 
 int main()
 {
-    show_threshold("res/rra.jpg");
+    log_polar("res/rra.jpg");
 }
