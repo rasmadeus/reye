@@ -22,4 +22,5 @@ HEADERS += \
     src/threshold.h \
     src/circle_finder.h \
     src/warp_affine.h \
-    src/log_polar.h
+    src/log_polar.h \
+    src/histogram.h
